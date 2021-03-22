@@ -1,5 +1,5 @@
 # deskad_mvc
-Blog Deskad en PHP MVC Orienté Objets
+Blog en PHP architecture MVC Orienté Objets
 
 # 22 mars 2021
 ## Dossiers et fichiers
