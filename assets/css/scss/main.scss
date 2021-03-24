@@ -1,7 +1,8 @@
 @import 'sizes';
 @import 'colors';
 @import 'fonts';
-
+@import 'home';
+@import 'connect';
 
 * {
     margin: 0;
@@ -46,10 +47,16 @@ header {
         top: 10px;
         right: 20px;
 
+        display: none;
+
         width: 40px;
         height: 40px;
 
         border: 1px solid $white;
+
+        @media screen and (max-width: 1000px) {
+            display: flex;
+        }
     }
 }
 
@@ -99,6 +106,15 @@ nav {
 main {
     grid-column: 2 / 7;
     grid-row: 2 / 3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    @media screen and (max-width: 1000px) {
+        grid-column: 1 / 7;
+    }
 }
 
 footer {
