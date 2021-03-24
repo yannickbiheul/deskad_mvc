@@ -3,6 +3,7 @@
 @import 'fonts';
 @import 'home';
 @import 'connect';
+@import 'mixins';
 
 * {
     margin: 0;
@@ -35,9 +36,7 @@ header {
     grid-column: 1 / 7;
     grid-row: 1 / 2;
 
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+    @include flexR(flex-start, center);
 
     background-color: $black;
     padding: 15px;
@@ -64,10 +63,7 @@ aside {
     grid-column: 1 / 2;
     grid-row: 2 / 3;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
+    @include flexC(space-around, center);
 
     background-color: $grey;
 
@@ -77,10 +73,7 @@ aside {
 }
 
 nav {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexC(center, center);
 
     a {
         color: #000;
@@ -89,10 +82,7 @@ nav {
 }
 
 .socials {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
+    @include flexR(center, center);
 
     padding: 0 40px;
 
@@ -107,10 +97,7 @@ main {
     grid-column: 2 / 7;
     grid-row: 2 / 3;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    @include flexC(center, center);
 
     @media screen and (max-width: 1000px) {
         grid-column: 1 / 7;
@@ -121,9 +108,7 @@ footer {
     grid-column: 1 / 7;
     grid-row: 3 / 4;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    @include flexR(center, center);
 
     background-color: $black;
     padding: 15px;

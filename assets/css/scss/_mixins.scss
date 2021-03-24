@@ -1,0 +1,28 @@
+@mixin flexR($jc, $ai) {
+    display: flex;
+    justify-content: $jc;
+    align-items: $ai;
+    flex-wrap: wrap;
+}
+
+@mixin flexC($jc, $ai) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $jc;
+    align-items: $ai;
+}
+
+@mixin button {
+    padding: 10px;
+    border: 1px solid $white;
+    border-radius: 5px;
+    background: $black;
+    color: $white;
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+    &:hover {
+        background: $white;
+        color: $black;
+    }
+}
