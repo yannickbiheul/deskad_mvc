@@ -27,17 +27,36 @@
 
     <header>
         <h1>Deskad</h1>
+        <div class="mobileButton">
+        </div>
     </header>
 
     <aside>
+
         <nav>
             <a href="#">Accueil</a>
             <a href="#">Articles</a>
-            <a href="#">Créer article</a>
+            <?php
+                if (isset($_SESSION['email']) && $_SESSION['email'] == 'yannickbiheul@outlook.fr') {
+                    ?>
+                        <a href="#">Créer article</a>
+                    <?php
+                }
+            ?>
             <a href="#">À propos</a>
             <a href="#">Contact</a>
             <a href="#">Connexion</a>
         </nav>
+
+        <div class="socials">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#"><i class="fab fa-youtube"></i></a>
+        </div>
+
     </aside>
 
     <main>
