@@ -35,7 +35,7 @@ header {
     grid-row: 1 / 2;
 
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
 
     background-color: $black;
@@ -63,6 +63,10 @@ aside {
     align-items: center;
 
     background-color: $grey;
+
+    @media screen and (max-width: 1000px) {
+        display: none;
+    }
 }
 
 nav {
@@ -113,10 +117,4 @@ footer {
     }
 }
 
-@media screen and (max-width: 1000px) {
 
-    aside {
-        display: none;
-    }
-
-}
