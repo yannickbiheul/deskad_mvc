@@ -17,4 +17,8 @@ class Controller {
     public function connect() {
         require('views/viewConnect.php');
     }
+
+    public function signupMember($post) {
+        $datas = $this->userService->saveMember($post);
+    }
 }
