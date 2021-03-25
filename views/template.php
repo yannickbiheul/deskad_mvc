@@ -3,7 +3,7 @@
 <head>
     <meta charset='UTF-8'>
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <title>Template</title>
+    <title><?= $title ?></title>
     <!-- DESCRIPTION -->
     <meta name='description' content='Un template en scss'>
     <!-- CSS -->
@@ -26,7 +26,7 @@
 <body>
 
     <header>
-        <h1>Deskad</h1>
+        <a href="index.php?action=home"><h1>Deskad</h1></a>
         <div class="mobileButton">
         </div>
     </header>
@@ -34,7 +34,7 @@
     <aside>
 
         <nav>
-            <a href="#">Accueil</a>
+            <a href="index.php?action=home">Accueil</a>
             <a href="#">Articles</a>
             <?php
                 if (isset($_SESSION['email']) && $_SESSION['email'] == 'yannickbiheul@outlook.fr') {
@@ -49,17 +49,18 @@
         </nav>
 
         <div class="socials">
-            <a href="#"><i class="fab fa-facebook-f"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#"><i class="fab fa-youtube"></i></a>
+            <a href="https://www.facebook.com/Deskad.fr/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/LeBok29000" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://www.instagram.com/yannickbiheul/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="https://github.com/yannickbiheul" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/yannick-biheul-4451a917b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.youtube.com/channel/UCAENnL0x3zwtiI2jLoz58Nw" target="_blank"><i class="fab fa-youtube"></i></a>
         </div>
 
     </aside>
 
     <main>
+        <?= $content ?>
     </main>
 
     <footer>
