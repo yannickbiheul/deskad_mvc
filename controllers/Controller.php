@@ -19,6 +19,7 @@ class Controller {
     }
 
     public function signupMember($post) {
-        $datas = $this->userService->saveMember($post);
+        $coords = $this->userService->checkCoords($post);
+        $password = $this->userService->checkPassword($post);
     }
 }
