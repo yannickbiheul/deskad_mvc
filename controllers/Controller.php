@@ -17,4 +17,9 @@ class Controller {
     public function connect() {
         require('views/viewConnect.php');
     }
+
+    public function signupMember($post) {
+        $coords = $this->userService->checkCoords($post);
+        $password = $this->userService->checkPassword($post);
+    }
 }

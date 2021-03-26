@@ -45,7 +45,7 @@
             ?>
             <a href="#">À propos</a>
             <a href="#">Contact</a>
-            <a href="#">Connexion</a>
+            <a href="index.php?action=connect">Connexion</a>
         </nav>
 
         <div class="socials">

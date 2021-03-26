@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 require_once('controllers/Controller.php');
 $controller = new Controller;
 
@@ -17,6 +19,10 @@ if (isset($_GET['action']) && isset($_GET['params'])) {
 
     if ($_GET['action'] == 'connect') {
         $controller->connect();
+    }
+
+    if ($_GET['action'] == 'signupMember') {
+        $controller->signupMember($_POST);
     }
 
 } else {
